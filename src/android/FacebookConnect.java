@@ -227,7 +227,7 @@ public class FacebookConnect extends Plugin {
 		final FacebookConnect me = this;
 		Runnable runnable = new Runnable() {
 			public void run() {
-				me.getFacebook().dialog(me.cordova.getContext(), method, options, new RegularDialogListener(me, callbackId));
+				me.getFacebook().dialog(me.cordova.getActivity(), method, options, new RegularDialogListener(me, callbackId));
 			};
 		};
 		pluginResult.setKeepCallback(true);
